@@ -20,10 +20,9 @@ module.exports = function solveEquation(equation) {
   }}
   
   d = array[1]*array[1] - 4*array[0]*array[2];
-  result[0] = ((-array[1]) + Math.sqrt(d)) / (2 * array[0]);
-  result[1] = ((-array[1]) - Math.sqrt(d)) / (2 * array[0]);
-  result[0] = Math.round(result[0]);
-  result[1] = Math.round(result[1]);
+  result[0] = Math.round(((-array[1]) + Math.sqrt(d)) / (2 * array[0]));
+  result[1] = Math.round(((-array[1]) - Math.sqrt(d)) / (2 * array[0]));
+
   result.sort(function(a, b){return a-b;})
   return result;
 
